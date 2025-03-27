@@ -2,12 +2,12 @@ package com.tais.inventario.dtos;
 
 import java.math.BigDecimal;
 
-public record ProductResponseDTO(
+public record ProductDTO(
         Long id,
         String name,
-        CategoryResponseDTO category,
+        CategoryDTO category,
         String description,
         BigDecimal price,
-        SupplierResponseDTO supplier,
+        SupplierDTO supplier,
         BigDecimal quantity
 ) {}
