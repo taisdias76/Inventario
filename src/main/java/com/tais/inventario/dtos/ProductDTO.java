@@ -2,7 +2,7 @@ package com.tais.inventario.dtos;
 
 import java.math.BigDecimal;
 
-public record ProductResponseDTO(
+public record ProductDTO(
         Long id,
         String name,
         CategoryDTO category,
