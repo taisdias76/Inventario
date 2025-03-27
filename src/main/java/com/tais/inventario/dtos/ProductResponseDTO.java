@@ -5,9 +5,9 @@ import java.math.BigDecimal;
 public record ProductResponseDTO(
         Long id,
         String name,
-        CategoryResponseDTO category,
+        CategoryDTO category,
         String description,
         BigDecimal price,
-        SupplierResponseDTO supplier,
+        SupplierDTO supplier,
         BigDecimal quantity
 ) {}
