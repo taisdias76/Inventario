@@ -25,7 +25,7 @@ public class CategoryService {
         return mapper.toDTOList(list);
     }
 
-    public CategoryDTO createUser(CategoryDTO dto) {
+    public CategoryDTO create(CategoryDTO dto) {
         Category category = mapper.toEntity(dto);
         Category saved = repository.save(category);
         return mapper.toDTO(saved);
