@@ -30,7 +30,7 @@ public class ProductService {
   public ProductDTO create(ProductRequest request) {
     Category category = categoryService.findById(request.categoryId());
     Supplier supplier = supplierService.findById(request.supplierId());
-    // Map the request to the entity
+    // Map the request
     Product mapped = mapper.fromRequest(request, category, supplier);
 
     Product product = repository.save(mapped);
