@@ -2,6 +2,7 @@ package com.tais.inventario.service;
 
 import com.tais.inventario.dtos.CategoryDTO;
 import com.tais.inventario.entities.Category;
+import com.tais.inventario.exceptions.models.InventoryNotFoundException;
 import com.tais.inventario.mappers.CategoryMapper;
 import com.tais.inventario.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,6 @@ public class CategoryService {
   }
 
   public Category findById(Long id) {
-    return repository.findById(id).orElseThrow(() -> new RuntimeException("Category not found"));
+    return repository.findById(id).orElseThrow(() -> new InventoryNotFoundException("Category not found"));
   }
 }
