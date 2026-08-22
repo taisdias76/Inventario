@@ -8,8 +8,6 @@ import org.springframework.test.context.TestPropertySource;
 @TestPropertySource(properties = "spring.cloud.config.enabled=false")
 class ApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
+  @Test
+  void contextLoads() {}
 }

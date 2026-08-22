@@ -2,17 +2,16 @@ package com.tais.inventario.mappers;
 
 import com.tais.inventario.dtos.CategoryDTO;
 import com.tais.inventario.entities.Category;
-import org.mapstruct.Mapper;
-
 import java.util.List;
+import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface CategoryMapper {
-    CategoryDTO toDTO(Category category);
+  CategoryDTO toDTO(Category category);
 
-    Category toEntity(CategoryDTO categoryDTO);
+  Category toEntity(CategoryDTO categoryDTO);
 
-    List<CategoryDTO> toDTOList(List<Category> categorys);
+  List<CategoryDTO> toDTOList(List<Category> categorys);
 
-    List<Category> toEntityList(List<CategoryDTO> categoryDTOs);
+  List<Category> toEntityList(List<CategoryDTO> categoryDTOs);
 }
