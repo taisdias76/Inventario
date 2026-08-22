@@ -7,10 +7,9 @@ import com.tais.inventario.entities.Product;
 import com.tais.inventario.entities.Supplier;
 import com.tais.inventario.mappers.ProductMapper;
 import com.tais.inventario.repository.ProductRepository;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class ProductService {
@@ -20,7 +19,11 @@ public class ProductService {
   private final CategoryService categoryService;
 
   @Autowired
-  public ProductService(ProductRepository repository, ProductMapper mapper, SupplierService supplierService, CategoryService categoryService) {
+  public ProductService(
+      ProductRepository repository,
+      ProductMapper mapper,
+      SupplierService supplierService,
+      CategoryService categoryService) {
     this.repository = repository;
     this.mapper = mapper;
     this.supplierService = supplierService;

@@ -5,10 +5,9 @@ import com.tais.inventario.dtos.ProductRequest;
 import com.tais.inventario.entities.Category;
 import com.tais.inventario.entities.Product;
 import com.tais.inventario.entities.Supplier;
+import java.util.List;
 import org.mapstruct.Mapper;
 import org.mapstruct.Named;
-
-import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface ProductMapper {

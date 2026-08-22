@@ -5,10 +5,9 @@ import com.tais.inventario.entities.Supplier;
 import com.tais.inventario.exceptions.models.InventoryNotFoundException;
 import com.tais.inventario.mappers.SupplierMapper;
 import com.tais.inventario.repository.SupplierRepository;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class SupplierService {
@@ -33,6 +32,8 @@ public class SupplierService {
   }
 
   public Supplier findById(Long id) {
-    return repository.findById(id).orElseThrow(() -> new InventoryNotFoundException("Supplier not found"));
+    return repository
+        .findById(id)
+        .orElseThrow(() -> new InventoryNotFoundException("Supplier not found"));
   }
 }
